@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./pannellum/pannellum.css" />
+    <script type="text/javascript" src="pannellum/pannellum.js"></script>
+</head>
+
+<body>
+    <div id="panorama"></div>
+    <div class="filters">
+        <button onclick="white()">
+            <label class="white">
+                <input type="radio" name="color" value="white">
+                <div class="layer"></div>
+                <div class="button"><span></span></div>
+            </label>
+        </button>
+        <button onclick="red()">
+            <label class="red">
+                <input type="radio" name="color" value="red">
+                <div class="layer"></div>
+                <div class="button"><span></span></div>
+            </label>
+        </button>
+        <button onclick="blue()">
+            <label class="blue">
+                <input type="radio" name="color" value="blue">
+                <div class="layer"></div>
+                <div class="button"><span></span></div>
+            </label>
+        </button>
+        <button onclick="grey()">
+            <label class="grey">
+                <input type="radio" name="color" value="grey">
+                <div class="layer"></div>
+                <div class="button"><span></span></div>
+            </label>
+        </button>
+    </div>
+
+    <script>
+        function white() {
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": "images/WhiteTST.jpg",
+                "autoLoad": true
+            });
+        }
+        function red() {
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": "images/RedTST.jpg",
+                "autoLoad": true
+            });
+        }
+        function blue() {
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": "images/BlueTST.jpg",
+                "autoLoad": true
+            });
+        }
+        function grey() {
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": "images/GreyTST.jpg",
+                "autoLoad": true
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
+
+@media only screen and (min-width: 1024px) {
+    section {
+        flex-direction: row;
+    }
+}
+
+
+section .screen {
+    position: relative;
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: 1s;
+}
+
+section:hover .screen {
+    opacity: 0.1;
+}
+
+section .screen:hover {
+    flex-grow: 5;
+    opacity: 1;
+}
+
+section .screen:nth-child(1) {
+    background: url(./images/preview1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section .screen:nth-child(2) {
+    background: url(./images/preview2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+section .screen:nth-child(3) {
+    background: url(./images/preview3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section .screen .content {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+    section .screen .content {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+section .screen .content h2 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #ed363a;
+}
+
+section .screen .content p {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-size: 2.8rem;
+    color: #f3f2f2;
+    white-space: nowrap;
+}
+
+.button {
+    display: block;
+    padding: 16px 32px;
+    width: fit-content;
+    text-align: center;
+    color: #f3f2f2;
+    border: 1px solid #f3f2f2;
+    border-radius: 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+}
