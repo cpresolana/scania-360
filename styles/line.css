@@ -1,3 +1,10 @@
+/* global animation */
+body { 
+    opacity: 0;
+    transition: opacity .5s;
+}
+/*  */
+
 html,
 body {
     width: 100%;
